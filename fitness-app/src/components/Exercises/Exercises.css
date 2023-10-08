@@ -1,0 +1,53 @@
+.exercises-container {
+  margin-top: 109px;
+  padding: 20px; 
+  text-align: center;
+}
+.exercises-container h2 {
+  font-size: 46px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 46px;
+}
+.exercise-stack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 107px;
+}
+.pagination-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 114px;
+}
+.nice-animation {
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  background: linear-gradient(to bottom, #000, #000 60%, #070fea 60%, #0c2aed 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+}
+
+
+@media screen and (max-width: 1150px) {
+
+.exercises-container {
+  margin-top: 50px;
+ }
+.exercises-container h2 {
+  font-size: 30px;
+ }
+.exercise-stack {
+  gap: 70px;
+ }
+.pagination-container {
+  margin-top: 70px;
+ }
+}
