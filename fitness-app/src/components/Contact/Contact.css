@@ -1,0 +1,102 @@
+#contact {
+  text-align: center;
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+.contact h5 {
+  font-Size: 1.3rem;
+  margin-bottom: 8px;
+}
+.contact h2 {
+  font-size: 2.7rem;
+  color: #070fea;
+}
+.container.contact-container {
+  width: 58%;
+  display: grid;
+  grid-template-columns: 30% 58%;
+  gap: 12%;
+  margin-top: 1.5rem;
+}
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.contact-option {
+  background-color: transparent;
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  border: 2px solid #000;
+  transition: #000;
+  color: #0b0b0b;
+}
+.contact-option:hover {
+  border-color: #fff;
+}
+.contact-option h4 {
+  margin-bottom: 4px;
+  font-size: 1.4rem;
+}
+.contact-option h5 {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.option-icon {
+font-size: 1.5rem;
+margin-bottom: 0.5rem;
+}
+
+.contact-option a {
+  margin-top: 0.7rem;
+  display: inline-block;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+input, textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: #000;
+  border: 2px solid #f0f0f4;
+  resize: none;
+  color: #fff;
+}
+input {
+  height: 60px;
+}
+.btn {
+  width: 145px;
+  height: 45px;
+  text-align: center;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #070fea;
+  border: 1px solid transparent;
+  transition: #000;
+}
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #DCCA87;
+}
+
+@media screen and (max-width: 1150px) {
+
+  .container.contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-right: 2.7rem;
+  }
+}
