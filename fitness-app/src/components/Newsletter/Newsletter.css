@@ -75,7 +75,7 @@
   font-size: 20px;
   margin-top: 0.8rem;
 }
-.form {
+form {
   display: flex;
   position: relative;
   height: 58px;
@@ -95,10 +95,10 @@ input {
 &::placeholder {
   color: #272727;
 }
-.form button {
+form button {
   position: absolute;
   right: -6px;
-  top: -15px;
+  top: -5px;
   height: 100%;
   border: none;
   outline: none;
@@ -113,7 +113,7 @@ input {
   border-top-right-radius: 16px;
   padding: 0 10px;
 }
-.form button:hover {
+form button:hover {
   background-color: #1818d4;
 }
 .thank {

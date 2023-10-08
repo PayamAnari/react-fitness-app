@@ -9,7 +9,7 @@ export const fetchBmiData = async (weight, height) => {
       height,
     },
     headers: {
-      'X-RapidAPI-Key': '3661f5a194mshf2166cfcbf1d782p149352jsndbdcb173ef6d',
+      'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
       'X-RapidAPI-Host': 'body-mass-index-bmi-calculator.p.rapidapi.com',
     },
   };

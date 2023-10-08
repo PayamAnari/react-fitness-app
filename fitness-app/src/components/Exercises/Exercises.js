@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Pagination from '@mui/material/Pagination';
 import { exerciseOptions, fetchData } from '../../utils/fetchData';
 import ExerciseCard from '../ExerciseCard/ExerciseCard';
-import Loader from '../Loader/Loader';
 import './Exercises.css';
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
@@ -51,8 +50,6 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
     window.scrollTo({ top: 1800, behavior: 'smooth' });
   };
-
-  if (!currentExercises.length) return <Loader />;
 
   return (
     <div id="exercises" className="exercises-container">

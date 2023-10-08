@@ -35,15 +35,15 @@ const Newsletter = () => {
               You will never miss our podcasts, latest news, etc. Our newsletter
               is once a week, every wednesday.
             </p>
-            <div className="form">
+            <form ref={form} onSubmit={handleSubscribe} className="form">
               <input
-                type="text"
+                type="email"
+                name="email"
                 placeholder="example@gmail.com"
-                ref={form}
-                onSubmit={handleSubscribe}
+                required
               />
               <button type="submit">Subscribe</button>
-            </div>
+            </form>
             <div className="thank">
               {subscribed && <p>Thank you for subscribing!</p>}
             </div>

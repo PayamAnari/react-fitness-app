@@ -24,6 +24,7 @@
 .detail-content {
   font-size: 18px;
   margin-top: 10px;
+  line-height: 1.5;
 }
 .detail-content span {
   text-transform: capitalize;
