@@ -1,0 +1,97 @@
+
+.hero-container {
+  position: relative;
+  padding: 20px;
+  margin-top: 212px;
+  margin-left: 50px;
+  font-family: 'Raleway';
+}
+.hero-container h5 {
+  font-weight: 600;
+  color: #4f4f53;
+  opacity: 0.1;
+  display: block;
+  font-size: 200px;
+}
+.hero-container h2 {
+  color: #000;
+  font-weight: 600;
+  font-size: 26px;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+.hero-container h3 {
+  font-weight: 700;
+  font-size: 49px;
+  margin-bottom: 23px;
+  margin-top: 30px;
+  animation: fadeInUp 0.5s ease-in-out 0.2s;
+  animation-fill-mode: both;
+}
+.hero-container span {
+  color: #FFFF00;
+}
+.hero-container h4 {
+  font-size: 22px;
+  line-height: 28px;
+  animation: fadeInUp 0.5s ease-in-out 0.4s;
+  animation-fill-mode: both;
+}
+.hero-banner-img {
+  position: absolute;
+  right: 40px;
+  top: 0px;
+  width: 700px;
+  height: 900px;
+  margin-top: -330px;
+  margin-bottom: 20px;
+
+}
+@keyframes shineAnimation {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.shine-text {
+  animation: shineAnimation 1s infinite alternate;
+}
+.explore-btn {
+  margin-top: 45px;
+  text-decoration: none;
+  width: 200px;
+  text-align: center;
+  background: #1F51FF;
+  padding: 14px;
+  font-size: 20px;
+  text-transform: none;
+  color: white;
+  border-radius: 18px;
+  animation: fadeInUp 0.5s ease-in-out 0.6s;
+  animation-fill-mode: both;
+}
+.explore-btn:hover {
+  background-color: #0c0d0e !important;
+}
+
+@media screen and (max-width: 1150px) {
+
+  .hero-container {
+    margin-left: 30px;
+  }
+  .hero-container h3 {
+    font-size: 38px;
+  }
+  .hero-container h4 {
+    font-size: 17px;
+  }
+  .hero-container h5 {
+    display: none;
+    
+  }
+  .hero-banner-img {
+   display: none;
+  }
+}
