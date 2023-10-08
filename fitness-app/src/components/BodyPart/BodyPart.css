@@ -1,0 +1,28 @@
+.bodyPart-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+  border-bottom-left-radius: 20px;
+  width: 270px;
+  height: 282px;
+  cursor: pointer;
+  gap: 47px;
+}
+.bodyPart-card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.bodyPart-typo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Alegreya;
+  color: #1F51FF;
+  text-transform: capitalize;
+}
+.bodyPart-img {
+  width: 48px;
+  height: 48px;
+}
+
