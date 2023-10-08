@@ -1,0 +1,61 @@
+.exercise-card {
+  width: 360px;
+  height: 410px;
+  background: #fff;
+  border-top: 4px solid #1F51FF;
+  border-bottom-left-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 10px;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+  box-shadow: 5px 5px 5px #67686c;
+}
+.exercise-card img {
+  height: 280px;
+}
+.exercise-card:hover {
+  transform: scale(1.1, 1.1);
+}
+.cards-buttons {
+  display: flex;
+  flex-direction: row;
+}
+.cards-buttons .card-button1 {
+  margin-left: 21px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  background-color: #800080;
+}
+.cards-buttons .card-button2 {
+  margin-left: 21px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  background-color: #FFBF00;
+}
+.cards-name {
+  margin-left: 21px;
+  color: #000;
+  font-weight: bold;
+  margin-top: 11px;
+  padding-bottom: 10px;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+@media screen and (max-width: 1150px) {
+  .exercise-card {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .exercise-card {
+    width: 280px;
+  }
+}
