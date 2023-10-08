@@ -32,8 +32,9 @@ const Newsletter = () => {
             <h1>Hey, wait...</h1>
             <h3>Subscribe to our newsletter!</h3>
             <p>
-              You will never miss our podcasts, latest news, etc. Our newsletter
-              is once a week, every wednesday.
+              You will never miss our fitness tips, workout routines, healthy
+              recipes, and more. Our newsletter is sent once a week, every
+              Wednesday.
             </p>
             <form ref={form} onSubmit={handleSubscribe} className="form">
               <input
