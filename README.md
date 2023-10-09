@@ -239,7 +239,7 @@ The project follows a structured directory hierarchy, with the main components o
 
 ```
 
-fitness-app/
+client/
 ├── public/
 │   ├── index.html
 │   └── ...
