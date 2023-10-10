@@ -48,8 +48,7 @@ export default function CheckoutForm() {
           </span>
         </button>
 
-        {message && <Completion />}
-        {message && <div id="payment-message">{message}</div>}
+        {message && <Completion /> && <div id="payment-message">{message}</div>}
       </form>
     </div>
   );
