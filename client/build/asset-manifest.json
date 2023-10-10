@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f7653ef5.css",
+    "main.js": "/static/js/main.118f142c.js",
+    "static/media/fit.png": "/static/media/fit.2c7508ef679e198c9967.png",
+    "static/media/bmi.png": "/static/media/bmi.21d0602d207e35fb3f27.png",
+    "static/media/obese.png": "/static/media/obese.6bdf2ff59b2ef19a63e4.png",
+    "static/media/bmi-detail.png": "/static/media/bmi-detail.3255a866fdda6f7849fa.png",
+    "static/media/body-part.png": "/static/media/body-part.35b1bb390ff80938e8ee.png",
+    "static/media/2.png": "/static/media/2.38bd82164990ed56e1a1.png",
+    "static/media/equipment.png": "/static/media/equipment.d47b6970ed57ad811a37.png",
+    "static/media/overweight.png": "/static/media/overweight.d289cb46e9633c985346.png",
+    "static/media/normalweight.png": "/static/media/normalweight.9343f93bce37d792e548.png",
+    "static/media/underweight.png": "/static/media/underweight.59ea1528911569173fa9.png",
+    "static/media/bmi-icon.png": "/static/media/bmi-icon.38e3235c9b8f3d653572.png",
+    "static/media/news.svg": "/static/media/news.3e9a6c233b100c0b82e64614279de3c2.svg",
+    "index.html": "/index.html",
+    "main.f7653ef5.css.map": "/static/css/main.f7653ef5.css.map",
+    "main.118f142c.js.map": "/static/js/main.118f142c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f7653ef5.css",
+    "static/js/main.118f142c.js"
+  ]
+}
