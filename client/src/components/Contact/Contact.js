@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { MdOutlineEmail } from 'react-icons/md';
 import { RiMessengerLine } from 'react-icons/ri';
 import { BsWhatsapp } from 'react-icons/bs';
@@ -8,12 +8,15 @@ import './Contact.css';
 
 const Contact = () => {
   const form = useRef();
+  const [messageSent, setMessageSent] = useState(false);
+
   const sendEmailHandler = (e) => {
     e.preventDefault();
 
     sendEmail(form.current)
       .then((result) => {
         console.log(result.text);
+        setMessageSent(true);
       })
       .catch((error) => {
         console.log(error.text);
@@ -67,6 +70,9 @@ const Contact = () => {
           <button type="submit" className="btn">
             Send Message
           </button>
+          {messageSent && (
+            <div className="message-sent">Your message has been sent!</div>
+          )}
         </form>
       </div>
     </section>
