@@ -40,7 +40,7 @@ function Payment() {
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost:5252/create-payment-intent', {
+    fetch('https://gym-fitness-vdt1.onrender.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
