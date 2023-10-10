@@ -1,0 +1,5 @@
+routes:
+  - match: /<:.*>
+    status: 200
+    rewrite:
+      destination: /index.html
