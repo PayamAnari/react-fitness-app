@@ -23,6 +23,11 @@ function getPlanAmountFromDatabase(planId) {
 app.use(express.static(process.env.STATIC_DIR));
 app.use(cors());
 
+app.get('/', (req, res) => {
+  const path = resolve(process.env.STATIC_DIR + '/index.html');
+  res.sendFile(path);
+});
+
 app.get('/config', (req, res) => {
   res.send({
     publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
@@ -47,11 +52,6 @@ app.get('/contact', (req, res) => {
 
 app.get('/completion', (req, res) => {
   const path = resolve(process.env.STATIC_DIR + '/completion.html');
-  res.sendFile(path);
-});
-
-app.get('/', (req, res) => {
-  const path = resolve(process.env.STATIC_DIR + '/index.html');
   res.sendFile(path);
 });
 

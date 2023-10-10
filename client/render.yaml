@@ -1,5 +1,8 @@
 routes:
-  - match: /<:.*>
+  - match: /
+    status: 200
+    continue: true
+  - match: /.*
     status: 200
     rewrite:
       destination: /index.html
