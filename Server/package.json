@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write \"**/*.{js,jsx}\""
+    "format": "prettier --write \"**/*.{js,jsx}\"",
+    "build": "echo 'This script is for server, no build required'",
+    "dev": "node server.js"
   },
   "author": "Payam Anari",
   "license": "ISC",

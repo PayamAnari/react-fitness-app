@@ -76,33 +76,37 @@ const Bmi = () => {
             {btnText}
           </button>
         </form>
-        <div className='bmi-results'>
-        {bmi && (
-          <p>
-            Your Body Mass Index Is: <span>{bmi}</span>
-          </p>
-        )}
-        {weightCategory && (
-          <p>
-            Your Weight Category Is: <span>{weightCategory}</span>
-          </p>
-        )}
-        {weightCategory === 'Underweight' && (
-          <img src={underweightImage} alt="Underweight" className="bmi-image" />
-        )}
-        {weightCategory === 'Normal Weight' && (
-          <img
-            src={normalWeightImage}
-            alt="Normal Weight"
-            className="bmi-image"
-          />
-        )}
-        {weightCategory === 'Overweight' && (
-          <img src={overweightImage} alt="Overweight" className="bmi-image" />
-        )}
-        {weightCategory === 'Obese' && (
-          <img src={obeseImage} alt="Obese" className="bmi-image" />
-        )}
+        <div className="bmi-results">
+          {bmi && (
+            <p>
+              Your Body Mass Index Is: <span>{bmi}</span>
+            </p>
+          )}
+          {weightCategory && (
+            <p>
+              Your Weight Category Is: <span>{weightCategory}</span>
+            </p>
+          )}
+          {weightCategory === 'Underweight' && (
+            <img
+              src={underweightImage}
+              alt="Underweight"
+              className="bmi-image"
+            />
+          )}
+          {weightCategory === 'Normal Weight' && (
+            <img
+              src={normalWeightImage}
+              alt="Normal Weight"
+              className="bmi-image"
+            />
+          )}
+          {weightCategory === 'Overweight' && (
+            <img src={overweightImage} alt="Overweight" className="bmi-image" />
+          )}
+          {weightCategory === 'Obese' && (
+            <img src={obeseImage} alt="Obese" className="bmi-image" />
+          )}
         </div>
       </div>
     </div>
