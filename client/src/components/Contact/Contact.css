@@ -92,6 +92,13 @@ input {
   border-color: #DCCA87;
 }
 
+.message-sent {
+  color: #000; 
+  font-size: 21px; 
+  font-weight: 300;
+  margin-top: 12px; 
+}
+
 @media screen and (max-width: 1150px) {
 
   .container.contact-container {

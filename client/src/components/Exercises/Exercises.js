@@ -62,17 +62,19 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       </div>
 
       <div className="pagination-container">
-        {exercises.length > 9 && (
-          <Pagination
-            color="standard"
-            shape="rounded"
-            defaultPage={1}
-            count={Math.ceil(exercises.length / exercisesPerPage)}
-            page={currentPage}
-            onChange={paginate}
-            size="large"
-          />
-        )}
+        <div className="pagination">
+          {exercises.length > 9 && (
+            <Pagination
+              color="standard"
+              shape="rounded"
+              defaultPage={1}
+              count={Math.ceil(exercises.length / exercisesPerPage)}
+              page={currentPage}
+              onChange={paginate}
+              size="large"
+            />
+          )}
+        </div>
       </div>
     </div>
   );

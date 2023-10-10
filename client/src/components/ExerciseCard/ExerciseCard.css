@@ -22,6 +22,8 @@
 .cards-buttons {
   display: flex;
   flex-direction: row;
+  margin: auto;
+  inset: 0;
 }
 .cards-buttons .card-button1 {
   margin-left: 21px;
@@ -30,6 +32,7 @@
   border-radius: 20px;
   text-transform: capitalize;
   background-color: #800080;
+  width: 110px;
 }
 .cards-buttons .card-button2 {
   margin-left: 21px;
@@ -38,6 +41,8 @@
   border-radius: 20px;
   text-transform: capitalize;
   background-color: #FFBF00;
+  width: 110px;
+
 }
 .cards-name {
   margin-left: 21px;
@@ -51,6 +56,9 @@
 @media screen and (max-width: 1150px) {
   .exercise-card {
     width: 320px;
+  }
+  .cards-buttons {
+    margin-left: 0.3rem;
   }
 }
 
