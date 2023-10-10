@@ -7,6 +7,8 @@ import sendEmail from '../../utils/sendEmail';
 import './Contact.css';
 
 const Contact = () => {
+  console.log('Contact component rendered');
+
   const form = useRef();
   const [messageSent, setMessageSent] = useState(false);
 
