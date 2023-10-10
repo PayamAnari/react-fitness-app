@@ -62,13 +62,13 @@ const Bmi = () => {
         <form className="form-bmi-detail">
           <input
             type="text"
-            placeholder="Enter Your Weight"
+            placeholder="Weight e.g 125lbs"
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
           />
           <input
             type="text"
-            placeholder="Enter Your Height"
+            placeholder="Height e.g 172cm"
             value={height}
             onChange={(e) => setHeight(e.target.value)}
           />
@@ -76,6 +76,7 @@ const Bmi = () => {
             {btnText}
           </button>
         </form>
+        <div className='bmi-results'>
         {bmi && (
           <p>
             Your Body Mass Index Is: <span>{bmi}</span>
@@ -102,6 +103,7 @@ const Bmi = () => {
         {weightCategory === 'Obese' && (
           <img src={obeseImage} alt="Obese" className="bmi-image" />
         )}
+        </div>
       </div>
     </div>
   );

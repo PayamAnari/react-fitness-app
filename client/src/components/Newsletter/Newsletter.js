@@ -36,7 +36,7 @@ const Newsletter = () => {
               recipes, and more. Our newsletter is sent once a week, every
               Wednesday.
             </p>
-            <form ref={form} onSubmit={handleSubscribe} className="form">
+            <form id="newsletter-form"ref={form} onSubmit={handleSubscribe} className="form">
               <input
                 type="email"
                 name="email"

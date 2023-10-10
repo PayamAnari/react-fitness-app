@@ -75,7 +75,7 @@
   font-size: 20px;
   margin-top: 0.8rem;
 }
-form {
+#newsletter-form {
   display: flex;
   position: relative;
   height: 58px;
@@ -95,10 +95,10 @@ input {
 &::placeholder {
   color: #272727;
 }
-form button {
+#newsletter-form button {
   position: absolute;
-  right: -6px;
-  top: -5px;
+  right: -10px;
+  top: -15px;
   height: 100%;
   border: none;
   outline: none;
@@ -113,7 +113,7 @@ form button {
   border-top-right-radius: 16px;
   padding: 0 10px;
 }
-form button:hover {
+#newsletter-form button:hover {
   background-color: #1818d4;
 }
 .thank {

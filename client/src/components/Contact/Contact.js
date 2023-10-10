@@ -50,7 +50,7 @@ const Contact = () => {
             </a>
           </article>
         </div>
-        <form ref={form} onSubmit={sendEmailHandler}>
+        <form id="contact-form"ref={form} onSubmit={sendEmailHandler}>
           <input
             type="text"
             name="name"

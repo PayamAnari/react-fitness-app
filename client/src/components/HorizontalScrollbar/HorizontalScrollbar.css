@@ -25,13 +25,15 @@
 .react-horizontal-scrolling-menu--wrapper {
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1150px) {
 
   .react-horizontal-scrolling-menu--scroll-container {
-    width: 500px;
+    width: 600px;
   }
   .left-arrow,
   .right-arrow {
