@@ -8,6 +8,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
 });
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 function getPlanAmountFromDatabase(planId) {
   const planAmounts = {
@@ -42,6 +43,11 @@ app.get('/get-plan-amount/:planId', (req, res) => {
   } else {
     res.status(404).json({ error: 'Plan not found', defaultAmount: 0 });
   }
+});
+
+app.get('/completion', (req, res) => {
+  const path = resolve(process.env.STATIC_DIR + '/completion.html');
+  res.sendFile(path);
 });
 
 app.post('/create-payment-intent', async (req, res) => {

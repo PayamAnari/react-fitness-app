@@ -2,10 +2,12 @@ import { PaymentElement } from '@stripe/react-stripe-js';
 import { useState } from 'react';
 import { useStripe, useElements } from '@stripe/react-stripe-js';
 import './Payment.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function CheckoutForm() {
   const stripe = useStripe();
   const elements = useElements();
+  const navigate = useNavigate();
 
   const [message, setMessage] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -19,16 +21,17 @@ export default function CheckoutForm() {
 
     setIsProcessing(true);
 
-    const { error, paymentIntent } = await stripe.confirmPayment({
+    const { paymentIntent } = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: `${window.location.origin}/completion`,
+        return_url: `${window.location.origin}/Completion`,
       },
+      redirect: 'if_required',
     });
 
-    if (error) {
-      setMessage(error.message);
-    } else if (paymentIntent && paymentIntent.status === 'success') {
+    if (paymentIntent && paymentIntent.status === 'requires_action') {
+    } else if (paymentIntent && paymentIntent.status === 'succeeded') {
+      navigate('/completion');
       setMessage('Payment status: ' + paymentIntent.status);
     } else {
       setMessage('Unexpected state');
