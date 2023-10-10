@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useStripe, useElements } from '@stripe/react-stripe-js';
 import './Payment.css';
 
-export default function CheckoutForm() {
+export default function CheckoutForm(setPaymentSuccess) {
   const stripe = useStripe();
   const elements = useElements();
 
@@ -30,6 +30,7 @@ export default function CheckoutForm() {
       setMessage(error.message);
     } else if (paymentIntent && paymentIntent.status === 'success') {
       setMessage('Payment status: ' + paymentIntent.status);
+      setPaymentSuccess(true);
     } else {
       setMessage('Unexpected state');
     }
