@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { Box } from '@mui/material';
 import './App.css';
 import ExerciseDetail from './pages/ExerciseDetail';
@@ -16,23 +16,21 @@ import Newsletter from './components/Newsletter/Newsletter';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Box width="400px" sx={{ width: { xl: '1488px' } }} m="auto">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="exercise/:id" element={<ExerciseDetail />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="PlanCards" element={<PlanCards />} />
-          <Route path="bmi" element={<Bmi />} />
-          <Route path="/bmi-detail" element={<BmiDetail />} />
-          <Route path="/payment/:id" element={<Payment />} />
-          <Route path="/completion" element={<Completion />} />
-          <Route path="/Newsletter" element={<Newsletter />} />
-        </Routes>
-        <Footer />
-      </Box>
-    </BrowserRouter>
+    <Box width="400px" sx={{ width: { xl: '1488px' } }} m="auto">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="exercise/:id" element={<ExerciseDetail />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="PlanCards" element={<PlanCards />} />
+        <Route path="bmi" element={<Bmi />} />
+        <Route path="/bmi-detail" element={<BmiDetail />} />
+        <Route path="/payment/:id" element={<Payment />} />
+        <Route path="/completion" element={<Completion />} />
+        <Route path="/Newsletter" element={<Newsletter />} />
+      </Routes>
+      <Footer />
+    </Box>
   );
 };
 
