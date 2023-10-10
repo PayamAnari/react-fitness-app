@@ -46,7 +46,7 @@ app.get('/get-plan-amount/:planId', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
-  const path = resolve(process.env.STATIC_DIR + '/contact.html');
+  const path = resolve(process.env.STATIC_DIR + '/index.html');
   res.sendFile(path);
 });
 

@@ -1,4 +1,8 @@
 routes:
+  - match: /api/create-payment-intent
+    status: 200
+    rewrite:
+      destination: /api/create-payment-intent
   - match: /
     status: 200
     continue: true
