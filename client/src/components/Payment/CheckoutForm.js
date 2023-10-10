@@ -30,7 +30,11 @@ export default function CheckoutForm() {
     if (error) {
       setMessage(error.message);
     } else if (paymentIntent && paymentIntent.status === 'success') {
-      setMessage('Payment status: ' + paymentIntent.status);
+      if (paymentIntent.redirectUrl) {
+        window.location.href = paymentIntent.redirectUrl;
+      } else {
+        setMessage('Payment status: ' + paymentIntent.status);
+      }
     } else {
       setMessage('Unexpected state');
     }

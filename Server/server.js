@@ -58,6 +58,7 @@ app.post('/create-payment-intent', async (req, res) => {
       currency: 'EUR',
       amount: planPrice * 100,
       automatic_payment_methods: { enabled: true },
+      return_url: `${process.env.BASE_URL}/completion`,
     });
 
     res.send({
