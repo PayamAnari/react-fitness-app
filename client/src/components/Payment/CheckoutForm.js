@@ -2,7 +2,6 @@ import { PaymentElement } from '@stripe/react-stripe-js';
 import { useState } from 'react';
 import { useStripe, useElements } from '@stripe/react-stripe-js';
 import './Payment.css';
-import Completion from './Completion';
 
 export default function CheckoutForm() {
   const stripe = useStripe();
@@ -30,11 +29,7 @@ export default function CheckoutForm() {
     if (error) {
       setMessage(error.message);
     } else if (paymentIntent && paymentIntent.status === 'success') {
-      if (paymentIntent.redirectUrl) {
-        window.location.href = paymentIntent.redirectUrl;
-      } else {
-        setMessage('Payment status: ' + paymentIntent.status);
-      }
+      setMessage('Payment status: ' + paymentIntent.status);
     } else {
       setMessage('Unexpected state');
     }
@@ -52,7 +47,7 @@ export default function CheckoutForm() {
           </span>
         </button>
 
-        {message && <Completion /> && <div id="payment-message">{message}</div>}
+        {message && <div id="payment-message">{message}</div>}
       </form>
     </div>
   );

@@ -58,7 +58,6 @@ app.post('/create-payment-intent', async (req, res) => {
       currency: 'EUR',
       amount: planPrice * 100,
       automatic_payment_methods: { enabled: true },
-      return_url: 'https://gym-fitness-vdt1.onrender.com/completion',
     });
 
     res.send({

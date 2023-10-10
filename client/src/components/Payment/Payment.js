@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Elements } from '@stripe/react-stripe-js';
 import CheckoutForm from './CheckoutForm';
@@ -12,8 +12,14 @@ function Payment() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`https://gym-fitness-vdt1.onrender.com/get-plan-amount/${id}`)
-      .then((response) => response.json())
+    fetch(`http://localhost:5252/get-plan-amount/${id}`)
+      .then((response) => {
+        if (response.status === 200) {
+          return response.json();
+        } else {
+          throw new Error('Plan amount not found');
+        }
+      })
       .then((data) => {
         setPlanAmount(data.amount);
       })
@@ -22,20 +28,19 @@ function Payment() {
       });
   }, [id]);
 
+  const planId = parseInt(id);
+  const selectedPlan = getPlanCards(planId);
+
   useEffect(() => {
-    fetch('https://gym-fitness-vdt1.onrender.com/config')
-      .then((response) => response.json())
-      .then(async (data) => {
-        const { publishableKey } = data;
-        setStripePromise(loadStripe(publishableKey));
-      })
-      .catch((error) => {
-        console.error('Error fetching publishable key:', error);
-      });
+    fetch('http://localhost:5252/config').then(async (r) => {
+      const { publishableKey } = await r.json();
+
+      setStripePromise(loadStripe(publishableKey));
+    });
   }, []);
 
   useEffect(() => {
-    fetch('https://gym-fitness-vdt1.onrender.com/create-payment-intent', {
+    fetch('http://localhost:5252/create-payment-intent', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -56,21 +61,23 @@ function Payment() {
   }, [id]);
 
   return (
-    <div className="text-container">
-      <h1>We are glad that you chose us</h1>
-      {planAmount !== null && (
-        <p>
-          Plan: <span>{getPlanCards(id).name}</span>
-          <br />
-          Price: <span>{planAmount} EUR</span>
-        </p>
-      )}
-      {clientSecret && stripePromise && (
-        <Elements stripe={stripePromise} options={{ clientSecret }}>
-          <CheckoutForm clientSecret={clientSecret} />
-        </Elements>
-      )}
-    </div>
+    <>
+      <div className="text-container">
+        <h1>We are glad that you chose us</h1>
+        {planAmount !== null && (
+          <p>
+            Plan: <span>{selectedPlan.name}</span>
+            <br />
+            Price: <span>{planAmount} EUR</span>
+          </p>
+        )}
+        {clientSecret && stripePromise && (
+          <Elements stripe={stripePromise} options={{ clientSecret }}>
+            <CheckoutForm clientSecret={clientSecret} />
+          </Elements>
+        )}
+      </div>
+    </>
   );
 }
 
