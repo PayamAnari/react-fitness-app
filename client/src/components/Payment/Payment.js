@@ -4,13 +4,11 @@ import { Elements } from '@stripe/react-stripe-js';
 import CheckoutForm from './CheckoutForm';
 import { loadStripe } from '@stripe/stripe-js';
 import { getPlanCards } from '../PlanCards/PlanData';
-import Completion from './Completion';
 
 function Payment() {
   const [stripePromise, setStripePromise] = useState(null);
   const [clientSecret, setClientSecret] = useState('');
   const [planAmount, setPlanAmount] = useState(null);
-  const [paymentSuccess, setPaymentSuccess] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
@@ -73,12 +71,11 @@ function Payment() {
             Price: <span>{planAmount} EUR</span>
           </p>
         )}
-        {clientSecret && stripePromise && !paymentSuccess && (
+        {clientSecret && stripePromise && (
           <Elements stripe={stripePromise} options={{ clientSecret }}>
             <CheckoutForm clientSecret={clientSecret} />
           </Elements>
         )}
-        {paymentSuccess && <Completion />}
       </div>
     </>
   );
