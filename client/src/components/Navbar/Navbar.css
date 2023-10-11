@@ -36,10 +36,10 @@
 }
 
 .navbar-link::after {
-  content: "";
+  content: '';
   width: 100%;
   height: 2px;
-  background-color: #DCCA87;
+  background-color: #dcca87;
   position: absolute;
   bottom: -6px;
   left: 0;
@@ -48,7 +48,7 @@
   transform-origin: right center;
 }
 .navbar-link:hover::after {
-  color: #DCCA87;
+  color: #dcca87;
   transform: scaleX(1);
   transform-origin: left center;
   transition-delay: 0.4s;
@@ -66,14 +66,14 @@
   width: 100%;
   height: 100vh;
   background: #000;
-  transition: .5s ease;
+  transition: 0.5s ease;
   flex-direction: column;
   z-index: 5;
 }
 
 .app-navbar-small-overlay .overlay-close {
   font-size: 27px;
-  color: #DCCA87;;
+  color: #dcca87;
   cursor: pointer;
   position: absolute;
   top: 20px;
@@ -84,7 +84,7 @@
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  margin-top: 9rem;
+  margin-top: 8rem;
 }
 
 .app-navbar-small-links li {
@@ -98,12 +98,11 @@
   color: #fff;
 }
 .navbar-link-small:hover {
-  color: #DCCA87;
+  color: #dcca87;
 }
 
-
 .slide-bottom {
-  animation: slideBottom 0.5s ease-in-out
+  animation: slideBottom 0.5s ease-in-out;
 }
 @keyframes slideBottom {
   from {
@@ -114,10 +113,9 @@
   }
 }
 
-
 @media screen and (max-width: 1150px) {
   .app-navbar-links {
-      display: none;
+    display: none;
   }
   .app-navbar {
     display: flex;
@@ -125,16 +123,15 @@
     background-color: #000;
   }
   .app-navbar-small {
-      display: flex;
+    display: flex;
   }
 }
 
-@media screen and (max-width:400px) {
-
+@media screen and (max-width: 400px) {
   .app-navbar {
     padding: 1rem;
   }
-.app-navbar-logo img {
+  .app-navbar-logo img {
     width: 110px;
   }
 }
