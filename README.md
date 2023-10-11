@@ -132,12 +132,23 @@ The contact form, powered by EmailJS, enables users to get in touch with support
 
 Here's how you can use the various features of the Fitness App:
 
-Home Page: Start your fitness journey by exploring exercises, calculating your BMI, or checking out premium fitness plans.
-Exercise Detail Page: Click on any exercise to view its detailed description, watch related exercise videos, and add it to your workout plan.
-Workout Planner: Create a workout plan tailored to your goals by selecting exercises from the extensive exercise database.
-BMI Calculator: Use the BMI calculator to determine your Body Mass Index (BMI) by providing your weight and height.
-Premium Plans: Discover premium fitness plans designed by experts and make secure payments through the integrated Stripe payment system.
-Contact Form: Reach out to us via the contact form for any questions, feedback, or assistance you may need.
+### Home Page: 
+Start your fitness journey by exploring exercises, calculating your BMI, or checking out premium fitness plans.
+
+### Exercise Detail Page: 
+Click on any exercise to view its detailed description, watch related exercise videos, and add it to your workout plan.
+
+### Workout Planner: 
+Create a workout plan tailored to your goals by selecting exercises from the extensive exercise database.
+
+### BMI Calculator: 
+Use the BMI calculator to determine your Body Mass Index (BMI) by providing your weight and height.
+
+### Premium Plans: 
+Discover premium fitness plans designed by experts and make secure payments through the integrated Stripe payment system.
+
+### Contact Form: 
+Reach out to us via the contact form for any questions, feedback, or assistance you may need.
 
 ---
 
@@ -334,11 +345,20 @@ client/
 
 Contributions to the Fitness App are highly encouraged! If you'd like to contribute, please follow these steps:
 
-1-Fork the Repository: Fork this repository to your GitHub account.
-2-Create a New Branch: Create a new branch for your feature or bug fix.
-3-Make Changes: Implement your changes or additions.
-4-Commit and Push: Commit your changes and push them to your forked repository.
-5-Submit a Pull Request: Create a pull request to the original repository, explaining your changes and their significance.
+1. ### Fork the Repository:
+Fork this repository to your GitHub account.
+
+2. ### Create a New Branch: 
+Create a new branch for your feature or bug fix.
+
+3. ### Make Changes: 
+Implement your changes or additions.
+
+4. ### Commit and Push: 
+Commit your changes and push them to your forked repository.
+
+5. ### Submit a Pull Request: 
+Create a pull request to the original repository, explaining your changes and their significance.
 
 ---
 
