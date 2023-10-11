@@ -21,7 +21,6 @@ function getPlanAmountFromDatabase(planId) {
 }
 
 app.use(express.static(process.env.STATIC_DIR));
-app.use(cors());
 
 app.get('/', (req, res) => {
   const path = resolve(process.env.STATIC_DIR + '/index.html');
@@ -46,7 +45,7 @@ app.get('/get-plan-amount/:planId', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
-  const path = resolve(process.env.STATIC_DIR + '/contact.html');
+  const path = resolve(process.env.STATIC_DIR + '/Contact.html');
   res.sendFile(path);
 });
 
