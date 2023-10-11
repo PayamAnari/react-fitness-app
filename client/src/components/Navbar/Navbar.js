@@ -33,7 +33,7 @@ const Navbar = () => {
           <HashLink
             className="navbar-link"
             smooth
-            to="/contact"
+            to="/Contact"
             target="_blank"
           >
             Contact
@@ -95,7 +95,7 @@ const Navbar = () => {
                 <HashLink
                   className="navbar-link-small"
                   smooth
-                  to="/contact"
+                  to="/Contact"
                   onClick={() => setToggleMenu(false)}
                 >
                   Contact
