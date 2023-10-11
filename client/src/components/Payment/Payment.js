@@ -10,9 +10,9 @@ function Payment() {
   const [clientSecret, setClientSecret] = useState('');
   const [planAmount, setPlanAmount] = useState(null);
   const { id } = useParams();
-
+  
   useEffect(() => {
-    fetch(`${process.env.SERVER_BASE_URL}/get-plan-amount/${id}`)
+    fetch(`${process.env.REACT_APP_SERVER_BASE_URL}/get-plan-amount/${id}`)
       .then((response) => {
         if (response.status === 200) {
           return response.json();
@@ -32,7 +32,7 @@ function Payment() {
   const selectedPlan = getPlanCards(planId);
 
   useEffect(() => {
-    fetch(`${process.env.SERVER_BASE_URL}/config`).then(async (r) => {
+    fetch(`${process.env.REACT_APP_SERVER_BASE_URL}/config`).then(async (r) => {
       const { publishableKey } = await r.json();
 
       setStripePromise(loadStripe(publishableKey));
@@ -40,7 +40,7 @@ function Payment() {
   }, []);
 
   useEffect(() => {
-    fetch(`${process.env.SERVER_BASE_URL}/create-payment-intent`, {
+    fetch(`${process.env.REACT_APP_SERVER_BASE_URL}/create-payment-intent`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
