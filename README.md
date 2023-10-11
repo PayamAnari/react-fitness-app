@@ -16,7 +16,7 @@
 ---
 
 <p align="center">
-	<img src="https://live.staticflickr.com/65535/53246000870_f190dcd279_z.jpg" width="950" height="520" alt="Screenshot 2023-07-15 at 21.47.28"/></a>
+	<img src="https://live.staticflickr.com/65535/53250566707_c246cd6e07_z.jpg" width="950" height="520" alt="Screenshot 2023-07-15 at 21.47.28"/></a>
 </p>
 
 ---
