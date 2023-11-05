@@ -20,7 +20,7 @@ const Bmi = () => {
 
     try {
       const bmiResult = await fetchBmiData(weight, height);
-      setBmi(bmiResult);
+      setBmi(bmiResult.toFixed(1));
 
       if (bmiResult < 18.5) {
         setWeightCategory('Underweight');

@@ -1,6 +1,6 @@
 .exercises-container {
   margin-top: 109px;
-  padding: 20px; 
+  padding: 20px;
   text-align: center;
 }
 .exercises-container h2 {
@@ -26,14 +26,20 @@
 .pagination ul li {
   display: flex;
   align-items: center;
-  width: 40px;
+  width: 50px;
   margin-top: 4rem;
 }
 .nice-animation {
   position: relative;
   display: inline-block;
   font-size: 3rem;
-  background: linear-gradient(to bottom, #000, #000 60%, #070fea 60%, #0c2aed 100%);
+  background: linear-gradient(
+    to bottom,
+    #000,
+    #000 60%,
+    #070fea 60%,
+    #0c2aed 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -41,19 +47,17 @@
   white-space: nowrap;
 }
 
-
 @media screen and (max-width: 1150px) {
-
-.exercises-container {
-  margin-top: 50px;
- }
-.exercises-container h2 {
-  font-size: 30px;
- }
-.exercise-stack {
-  gap: 70px;
- }
-.pagination-container {
-  margin-top: 3rem;
- }
+  .exercises-container {
+    margin-top: 50px;
+  }
+  .exercises-container h2 {
+    font-size: 30px;
+  }
+  .exercise-stack {
+    gap: 70px;
+  }
+  .pagination-container {
+    margin-top: 3rem;
+  }
 }
