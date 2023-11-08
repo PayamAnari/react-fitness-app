@@ -4,7 +4,9 @@ import { FaFacebook } from 'react-icons/fa';
 import { FiInstagram } from 'react-icons/fi';
 import { IoLogoTwitter } from 'react-icons/io';
 import { FaGithub } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+
 import './Footer.css';
 
 const Footer = () => {
@@ -15,39 +17,34 @@ const Footer = () => {
       </div>
       <ul className="links">
         <li>
-          <HashLink className="footer-link" smooth to="/">
+          <HashLink className="footer-link" to="/">
             Home
           </HashLink>
         </li>
         <li>
-          <HashLink className="footer-link" smooth to="#exercises">
+          <HashLink className="footer-link" to="#exercises">
             Exercises
           </HashLink>
         </li>
         <li>
-          <HashLink className="footer-link" smooth to="/bmi-detail">
+          <HashLink className="footer-link" to="/bmi-detail">
             Bmi
           </HashLink>
         </li>
         <li>
-          <HashLink className="footer-link" smooth to="#plans">
+          <HashLink className="footer-link" to="#plans">
             Plans
           </HashLink>
         </li>
         <li>
-          <HashLink
-            className="footer-link"
-            smooth
-            to="/contact"
-            target="_blank"
-          >
+          <Link className="footer-link" to="/contact" target="_blank">
             Contact
-          </HashLink>
+          </Link>
         </li>
         <li>
-          <HashLink className="footer-link" smooth to="#">
+          <Link className="footer-link" to="#">
             services
-          </HashLink>
+          </Link>
         </li>
       </ul>
       <div className="footer-social">
@@ -70,29 +67,29 @@ const Footer = () => {
       </div>
       <ul className="links-last">
         <li>
-          <HashLink className="footer-last" smooth to="#">
+          <Link className="footer-last" to="#">
             FAQ
-          </HashLink>
+          </Link>
         </li>
         <li>
-          <HashLink className="footer-last" smooth to="#">
+          <Link className="footer-last" to="#">
             Term & conditions
-          </HashLink>
+          </Link>
         </li>
         <li>
-          <HashLink className="footer-last" smooth to="#">
+          <Link className="footer-last" to="#">
             Reporting
-          </HashLink>
+          </Link>
         </li>
         <li>
-          <HashLink className="footer-last" smooth to="#">
+          <Link className="footer-last" to="#">
             Support Policy
-          </HashLink>
+          </Link>
         </li>
         <li>
-          <HashLink className="footer-last" smooth to="#">
+          <Link className="footer-last" to="#">
             Privacy
-          </HashLink>
+          </Link>
         </li>
       </ul>
     </footer>

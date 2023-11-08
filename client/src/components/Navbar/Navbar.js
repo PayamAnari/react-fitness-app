@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdClose } from 'react-icons/md';
-import { HashLink } from 'react-router-hash-link';
 import Logo from '../../assets/images/2.png';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -14,33 +15,27 @@ const Navbar = () => {
       </div>
       <ul className="app-navbar-links">
         <li>
-          <HashLink className="navbar-link" smooth to="/">
+          <HashLink className="navbar-link" to="/">
             Home
           </HashLink>
         </li>
         <li>
-          <HashLink className="navbar-link" smooth to="#exercises">
+          <HashLink className="navbar-link" to="#exercises">
             Exercises
           </HashLink>
         </li>
-
         <li>
-          <HashLink className="navbar-link" smooth to="#plans">
+          <HashLink className="navbar-link" to="#plans">
             Plans
           </HashLink>
         </li>
         <li>
-          <HashLink
-            className="navbar-link"
-            smooth
-            to="/Contact"
-            target="_blank"
-          >
+          <Link className="navbar-link" to="/Contact">
             Contact
-          </HashLink>
+          </Link>
         </li>
         <li>
-          <HashLink className="navbar-link" smooth to="#bmi">
+          <HashLink className="navbar-link" to="#bmi">
             Bmi
           </HashLink>
         </li>
@@ -63,7 +58,6 @@ const Navbar = () => {
               <li>
                 <HashLink
                   className="navbar-link-small"
-                  smooth
                   to="/"
                   onClick={() => setToggleMenu(false)}
                 >
@@ -73,18 +67,15 @@ const Navbar = () => {
               <li>
                 <HashLink
                   className="navbar-link-small"
-                  smooth
                   to="#exercises"
                   onClick={() => setToggleMenu(false)}
                 >
                   Exercises
                 </HashLink>
               </li>
-
               <li>
                 <HashLink
                   className="navbar-link-small"
-                  smooth
                   to="#plans"
                   onClick={() => setToggleMenu(false)}
                 >
@@ -92,19 +83,17 @@ const Navbar = () => {
                 </HashLink>
               </li>
               <li>
-                <HashLink
+                <Link
                   className="navbar-link-small"
-                  smooth
                   to="/Contact"
                   onClick={() => setToggleMenu(false)}
                 >
                   Contact
-                </HashLink>
+                </Link>
               </li>
               <li>
                 <HashLink
                   className="navbar-link-small"
-                  smooth
                   to="#bmi"
                   onClick={() => setToggleMenu(false)}
                 >
